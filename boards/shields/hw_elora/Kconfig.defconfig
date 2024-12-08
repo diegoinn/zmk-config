@@ -1,15 +1,15 @@
-if SHIELD_MY_KEYBOARD_LEFT
+if SHIELD_HW_ELORA_LEFT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "My Keyboard"
+    default "HW Elora"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_MY_KEYBOARD_LEFT || SHIELD_MY_KEYBOARD_RIGHT
+if SHIELD_HW_ELORA_LEFT || SHIELD_HW_ELORA_RIGHT
 
 config ZMK_SPLIT
     default y
