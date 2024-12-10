@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "keys_es_latin_american.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include "keys_es_latin_american.h"
 
 / {
     keymap {
@@ -21,11 +21,21 @@
             //                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
 
             bindings = <
-&kp ESC     &kp ES_N1       &kp ES_N2       &kp ES_N3           &kp ES_N4         &kp ES_N5                                            &kp ES_N6  &kp ES_N7          &kp ES_N8            &kp ES_N9        &kp ES_N0              &kp DEL
-&kp TAB     &kp ES_Q        &kp ES_W        &kp ES_E            &kp ES_R          &kp ES_T                                             &kp ES_Y   &kp ES_U           &kp ES_I             &kp ES_O         &kp ES_P               &kp ES_BSLH
-&kp LSHIFT  &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                                &kp ES_H      &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt RIGHT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_SQT
-&kp LCTRL   &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B    &kp N1   &kp N2   &kp N5         &kp N6     &kp ES_N      &kp ES_M              &kp ES_COMMA            &kp ES_DOT          &kp ES_FSLH            &kp RCTRL
-                                            &kp LGUI            &mo 1             &kp RET  &kp TAB  &kp ESC  &kp BACKSPACE  &kp ENTER  &kp SPACE  &mo 1              &kp RALT
+&kp ESC     &kp ES_N1          &kp ES_N2          &kp ES_N3              &kp ES_N4            &kp ES_N5                                              &kp ES_N6  &kp ES_N7             &kp ES_N8               &kp ES_N9           &kp ES_N0                 &kp DEL
+&kp TAB     &kp ES_Q           &kp ES_W           &kp ES_E               &kp ES_R             &kp ES_T                                               &kp ES_Y   &kp ES_U              &kp ES_I                &kp ES_O            &kp ES_P                  &kp ES_BSLH
+&kp LSHIFT  &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                               &kp ES_H   &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt RIGHT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_SQT
+&kp LCTRL   &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B   &kp N1   &kp N2   &kp N5         &kp N6     &kp ES_N   &kp ES_M              &kp ES_COMMA            &kp ES_DOT          &kp ES_FSLH               &kp RCTRL
+                                                  &mo 2                  &mo 1                &kp RET    &kp TAB  &kp ESC  &kp BACKSPACE  &kp ENTER  &kp SPACE  &mo 1                 &kp RALT
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans            &trans       &trans       &trans       &trans                                  &trans  &trans        &trans       &trans        &trans               &trans
+&trans  &kp ES_EXCL       &trans       &trans       &trans       &trans                                  &trans  &kp ES_EQUAL  &kp ES_DQT   &kp ES_SQT    &trans               &trans
+&trans  &kp ES_LESS_THAN  &kp ES_LBKT  &kp ES_LBRC  &kp ES_LPAR  &trans                                  &trans  &kp ES_RPAR   &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
+&trans  &trans            &trans       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans        &kp ES_SEMI  &kp ES_COLON  &trans               &trans
+                                       &trans       &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
             >;
         };
 
@@ -36,16 +46,6 @@
 &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans                                  &kp LEFT_ARROW  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans     &trans  &trans
                                         &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans
-            >;
-        };
-
-        layer_2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
