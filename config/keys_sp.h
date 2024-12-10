@@ -38,6 +38,7 @@
 #define ES_L L                  // L
 #define ES_M M                  // M
 #define ES_N N                  // N
+#define ES_NTIL SEMI            // Ñ
 #define ES_O O                  // O
 #define ES_P P                  // P
 #define ES_Q Q                  // Q
@@ -59,7 +60,6 @@
 #define ES_LABK BSLH            // <
 #define ES_LCBR SQT             // {
 #define ES_MINS SLASH           // -
-#define ES_NTIL SEMI            // Ñ
 #define ES_PLUS RIGHT_BRACKET   // +
 #define ES_RCBR NUHS            // }
 #define ES_SQT MINS             // '
