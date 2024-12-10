@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/keys.h>
-#pragma once
 // clang-format off
 
 // Aliases
