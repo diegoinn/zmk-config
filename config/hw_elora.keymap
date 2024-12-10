@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include "keys_sp.h"
+#include "keys_es_latin_american.h"
 
 / {
     keymap {
@@ -22,9 +22,9 @@
 
             bindings = <
 &kp ESC     &kp N1          &kp N2          &kp N3              &kp N4            &kp N5                                               &kp N6     &kp N7             &kp N8               &kp N9           &kp N0                 &kp DEL
-&kp TAB     &kp Q           &kp W           &kp E               &kp R             &kp T                                                &kp Y      &kp U              &kp I                &kp O            &kp P                  &kp ES_BSLS
-&kp LSHIFT  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                                                &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI ES_NTIL  &kp ES_SQT
-&kp LCTRL   &kp Z           &kp X           &kp C               &kp V             &kp B    &kp N1   &kp N2   &kp N5         &kp N6     &kp N      &kp M              &kp COMMA            &kp DOT          &kp ES_SLSH            &kp RCTRL
+&kp TAB     &kp Q           &kp W           &kp E               &kp R             &kp T                                                &kp Y      &kp U              &kp I                &kp O            &kp P                  &kp ES_BSLH
+&kp LSHIFT  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                                                &kp H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RIGHT_ALT L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_SQT
+&kp LCTRL   &kp Z           &kp X           &kp C               &kp V             &kp B    &kp N1   &kp N2   &kp N5         &kp N6     &kp N      &kp M              &kp COMMA            &kp DOT          &kp ES_FSLH            &kp RCTRL
                                             &kp LGUI            &mo 1             &kp RET  &kp TAB  &kp ESC  &kp BACKSPACE  &kp ENTER  &kp SPACE  &mo 1              &kp RALT
             >;
         };
