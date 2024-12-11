@@ -27,11 +27,11 @@
             //                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
 
             bindings = <
-&kp ES_PIPE       &kp ES_N1          &kp ES_N2          &kp ES_N3              &kp ES_N4            &kp ES_N5                                                      &kp ES_N6      &kp ES_N7             &kp ES_N8               &kp ES_N9          &kp ES_N0                 &kp DEL
-&kp TAB           &kp ES_Q           &kp ES_W           &kp ES_E               &kp ES_R             &kp ES_T                                                       &kp ES_Y       &kp ES_U              &kp ES_I                &kp ES_O           &kp ES_P                  &kp ES_SQT
-&kp LSHIFT        &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                                       &kp ES_H       &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt LEFT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_ACUTE
-&kp ES_LESS_THAN  &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B   &kp LEFT   &kp UP     &kp DOWN     &kp RIGHT_ARROW  &kp ES_N       &kp ES_M              &kp ES_COMMA            &mt RALT ES_DOT    &kp ES_MINUS              &kp RCTRL
-                                                        &mo 3                  &kp LEFT_GUI         &kp RET    &lt 2 TAB  &lt 1 ESC  &lt 1 ENTER  &lt 2 SPACE      &kp BACKSPACE  &kt RIGHT_GUI         &mo 3
+&kp ES_PIPE       &kp ES_N1          &kp ES_N2          &kp ES_N3              &kp ES_N4            &kp ES_N5                                                  &kp ES_N6      &kp ES_N7             &kp ES_N8               &kp ES_N9          &kp ES_N0                 &kp DEL
+&kp TAB           &kp ES_Q           &kp ES_W           &kp ES_E               &kp ES_R             &kp ES_T                                                   &kp ES_Y       &kp ES_U              &kp ES_I                &kp ES_O           &kp ES_P                  &kp ES_SQT
+&kp LSHIFT        &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                                   &kp ES_H       &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt LEFT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_ACUTE
+&kp ES_LESS_THAN  &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B   &kp LEFT   &kp UP     &kp DOWN     &lt 2 RIGHT  &kp ES_N       &kp ES_M              &kp ES_COMMA            &mt RALT ES_DOT    &kp ES_MINUS              &kp RCTRL
+                                                        &mo 3                  &kp LEFT_GUI         &kp RET    &lt 2 TAB  &lt 1 ESC  &lt 1 ENTER  &kp SPACE    &kp BACKSPACE  &kt LEFT_GUI          &mo 3
             >;
         };
 
@@ -39,7 +39,7 @@
             bindings = <
 &trans  &trans            &trans       &trans       &trans         &trans                                          &trans       &trans        &trans       &trans        &trans               &trans
 &trans  &kp ES_EXCL       &kp ES_DQT   &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PERCENT                                  &kp ES_FSLH  &kp ES_EQUAL  &kp ES_PLUS  &kp ES_STAR   &kp ES_TILDE         &trans
-&trans  &kp ES_LESS_THAN  &kp ES_LBKT  &kp ES_LBRC  &kp ES_LPAR    &trans                                          &trans       &kp ES_RPAR   &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
+&trans  &kp ES_LESS_THAN  &kp ES_LBKT  &kp ES_LBRC  &kp ES_LPAR    &trans                                          &kp ES_BSLH  &kp ES_RPAR   &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
 &trans  &trans            &trans       &trans       &trans         &trans          &trans  &trans  &trans  &trans  &trans       &trans        &kp ES_SEMI  &kp ES_COLON  &trans               &trans
                                        &trans       &trans         &trans          &trans  &trans  &trans  &trans  &trans       &trans        &trans
             >;
