@@ -92,7 +92,7 @@
 &trans   &trans  &trans  &trans  &trans  &trans                                  &kp ES_COMMA  &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_FSLH   &kp ES_STAR
 &trans   &trans  &trans  &trans  &trans  &trans                                  &kp ES_DOT    &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_PLUS   &trans
 &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ES_N0     &kp ES_N1  &kp ES_N2  &kp ES_N3  &kp ES_MINUS  &trans
-                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &trans
+                         &trans  &trans  &trans  &trans  &to 0   &trans  &trans  &trans        &trans     &trans
             >;
         };
 
