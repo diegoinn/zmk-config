@@ -15,6 +15,29 @@
 };
 
 / {
+    macros {
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LCTRL &kp ES_PLUS>;
+            label = "ZOOM_IN";
+        };
+
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_CONTROL &kp ES_MINUS>;
+            label = "ZOOM_OUT";
+        };
+
+        zoom_zero: zoom_zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LCTRL &kp ES_N0>;
+            label = "ZOOM_ZERO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,41 +49,51 @@
             //                               |   GUI   |   DEL   | RETURN  |  SPACE  | ESCAPE  |  |  RETURN |  SPACE  |   TAB   |   BSPC  |  R ALT  |
 
             bindings = <
-&kp ES_PIPE       &kp ES_N1          &kp ES_N2          &kp ES_N3              &kp ES_N4            &kp ES_N5                                                  &kp ES_N6      &kp ES_N7             &kp ES_N8               &kp ES_N9          &kp ES_N0                 &kp DEL
-&kp TAB           &kp ES_Q           &kp ES_W           &kp ES_E               &kp ES_R             &kp ES_T                                                   &kp ES_Y       &kp ES_U              &kp ES_I                &kp ES_O           &kp ES_P                  &kp ES_SQT
-&kp LSHIFT        &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                                   &kp ES_H       &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt LEFT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &kp ES_ACUTE
-&kp ES_LESS_THAN  &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B   &kp LEFT   &kp UP     &kp DOWN     &lt 2 RIGHT  &kp ES_N       &kp ES_M              &kp ES_COMMA            &mt RALT ES_DOT    &kp ES_MINUS              &kp RCTRL
-                                                        &mo 3                  &kp LEFT_GUI         &kp RET    &lt 2 TAB  &lt 1 ESC  &lt 1 ENTER  &kp SPACE    &kp BACKSPACE  &kp LEFT_GUI          &mo 3
+&kp ES_PIPE                &kp ES_N1          &kp ES_N2          &kp ES_N3              &kp ES_N4            &kp ES_N5                                                   &kp ES_N6      &kp ES_N7             &kp ES_N8               &kp ES_N9          &kp ES_N0                 &kp BACKSPACE
+&kp TAB                    &kp ES_Q           &kp ES_W           &kp ES_E               &kp ES_R             &kp ES_T                                                    &kp ES_Y       &kp ES_U              &kp ES_I                &kp ES_O           &kp ES_P                  &kp ES_SQT
+&kp LSHIFT                 &mt LEFT_GUI ES_A  &mt LEFT_ALT ES_S  &mt LEFT_CONTROL ES_D  &mt LEFT_SHIFT ES_F  &kp ES_G                                                    &kp ES_H       &mt RIGHT_SHIFT ES_J  &mt RIGHT_CONTROL ES_K  &mt LEFT_ALT ES_L  &mt RIGHT_GUI ES_N_TILDE  &mt RALT ES_ACUTE
+&mt LEFT_ALT ES_LESS_THAN  &kp ES_Z           &kp ES_X           &kp ES_C               &kp ES_V             &kp ES_B      &to 0      &to 1      &to 2        &to 3      &kp ES_N       &kp ES_M              &kp ES_COMMA            &kp ES_PERIOD      &kp ES_MINUS              &kp ES_CARET
+                                                                 &mo 4                  &kp LEFT_CONTROL     &kp LEFT_GUI  &lt 2 TAB  &lt 1 ESC  &lt 1 ENTER  &kp SPACE  &kp BACKSPACE  &kp LEFT_GUI          &mo 4
             >;
         };
 
         symbols {
             bindings = <
-&trans  &trans            &trans       &trans       &trans         &trans                                          &trans       &trans        &trans       &trans        &trans               &trans
-&trans  &kp ES_EXCL       &kp ES_DQT   &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PERCENT                                  &kp ES_FSLH  &kp ES_EQUAL  &kp ES_PLUS  &kp ES_STAR   &kp ES_TILDE         &trans
-&trans  &kp ES_LESS_THAN  &kp ES_LBKT  &kp ES_LBRC  &kp ES_LPAR    &trans                                          &kp ES_BSLH  &kp ES_RPAR   &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
-&trans  &trans            &trans       &trans       &trans         &trans          &trans  &trans  &trans  &trans  &trans       &trans        &kp ES_SEMI  &kp ES_COLON  &trans               &trans
-                                       &trans       &trans         &trans          &trans  &trans  &trans  &trans  &trans       &trans        &trans
+&trans  &trans        &trans        &trans       &trans         &trans                                          &trans       &trans       &trans       &trans        &trans               &trans
+&trans  &kp ES_EXCL   &kp ES_DQT    &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PERCENT                                  &kp ES_BSLH  &kp ES_LPAR  &kp ES_LBRC  &kp ES_LBKT   &kp ES_LESS_THAN     &trans
+&trans  &kp ES_TILDE  &kp ES_MINUS  &kp ES_PLUS  &kp ES_EQUAL   &kp ES_STAR                                     &kp ES_FSLH  &kp ES_RPAR  &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
+&trans  &trans        &trans        &trans       &kp ES_AMPS    &kp ES_AT       &trans  &trans  &trans  &trans  &trans       &trans       &kp ES_SEMI  &kp ES_COLON  &kp ES_UNDER         &trans
+                                    &trans       &trans         &trans          &trans  &to 0   &trans  &trans  &trans       &trans       &trans
             >;
         };
 
         movement {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                  &trans      &trans                &trans                &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp C_MUTE  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_PLAY_PAUSE  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                  &kp LEFT    &kp DOWN              &kp UP                &kp RIGHT         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans            &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans                &trans
+&trans  &trans  &trans  &trans  &trans        &kp C_BRI_MAX                                  &trans      &trans     &trans    &trans     &trans         &trans
+&trans  &trans  &trans  &trans  &kp C_VOL_UP  &kp C_BRI_UP                                   &zoom_zero  &zoom_out  &zoom_in  &trans     &kp PAGE_UP    &trans
+&trans  &trans  &trans  &trans  &kp C_VOL_DN  &kp C_BRI_DN                                   &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &kp K_MUTE    &kp C_BRI_MIN  &trans  &trans  &trans  &trans  &trans      &trans     &trans    &trans     &trans         &trans
+                        &trans  &trans        &trans         &trans  &to 0   &trans  &trans  &trans      &trans     &trans
+            >;
+        };
+
+        num_func {
+            bindings = <
+&kp F12  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                  &kp F6        &kp F7     &kp F8     &kp F9     &kp F10       &kp F11
+&trans   &trans  &trans  &trans  &trans  &trans                                  &kp ES_COMMA  &kp ES_N7  &kp ES_N8  &kp ES_N9  &kp ES_FSLH   &kp ES_STAR
+&trans   &trans  &trans  &trans  &trans  &trans                                  &kp ES_DOT    &kp ES_N4  &kp ES_N5  &kp ES_N6  &kp ES_PLUS   &trans
+&trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp ES_N0     &kp ES_N1  &kp ES_N2  &kp ES_N3  &kp ES_MINUS  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans     &trans
             >;
         };
 
         system {
             bindings = <
-&bt BT_CLR  &trans        &trans        &trans        &trans        &bootloader                                  &bootloader     &trans    &trans  &trans     &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans                                       &trans          &trans    &trans  &trans     &trans  &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans                                       &kp LEFT_ARROW  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans      &trans        &trans        &trans        &trans        &trans       &trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans     &trans  &trans
-                                        &trans        &trans        &trans       &trans  &trans  &trans  &trans  &trans          &trans    &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                     &trans          &trans    &trans  &trans     &trans  &bt BT_CLR_ALL
+&trans      &trans        &trans        &trans        &trans        &trans                                                           &trans          &trans    &trans  &trans     &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans                                                           &kp LEFT_ARROW  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&bt BT_CLR  &trans        &trans        &trans        &trans        &trans        &trans  &bootloader           &bootloader  &trans  &trans          &trans    &trans  &trans     &trans  &trans
+                                        &trans        &trans        &trans        &trans  &kp C_AL_SCREENSAVER  &trans       &trans  &trans          &trans    &trans
             >;
         };
     };
