@@ -69,7 +69,7 @@
         symbols {
             bindings = <
 &trans  &trans        &trans        &trans       &trans         &trans                                          &trans       &trans       &trans       &trans        &trans               &trans
-&trans  &kp ES_EXCL   &kp ES_DQT    &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PERCENT                                  &kp ES_BSLH  &kp ES_LPAR  &kp ES_LBRC  &kp ES_LBKT   &kp ES_LESS_THAN     &trans
+&trans  &kp ES_EXCL   &kp ES_DQT    &kp ES_HASH  &kp ES_DOLLAR  &kp ES_PERCENT                                  &kp ES_BSLH  &kp ES_LPAR  &kp ES_LBRC  &kp ES_LBKT   &kp ES_LESS_THAN     &kp ES_GRAVE
 &trans  &kp ES_TILDE  &kp ES_MINUS  &kp ES_PLUS  &kp ES_EQUAL   &kp ES_STAR                                     &kp ES_FSLH  &kp ES_RPAR  &kp ES_RBRC  &kp ES_RBKT   &kp ES_GREATER_THAN  &trans
 &trans  &trans        &trans        &trans       &kp ES_AMPS    &kp ES_AT       &trans  &trans  &trans  &trans  &trans       &trans       &kp ES_SEMI  &kp ES_COLON  &kp ES_UNDER         &trans
                                     &trans       &trans         &trans          &trans  &to 0   &trans  &trans  &trans       &trans       &trans
